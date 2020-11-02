@@ -1,5 +1,6 @@
 /* Master styles*/
 body {
+    font-family: "Lato", sans-serif;
     margin: 0px;
 }
 
@@ -45,6 +46,14 @@ body {
     color: black;
 }
 
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+    color: black !important;
+}
+
 /* Portfolio styles*/
 
 .portfolio-items-wrapper {
@@ -57,7 +66,7 @@ body {
 }
 
 .portfolio-img-background {
-    height: 300px;
+    height: 350px;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -73,7 +82,7 @@ body {
     background-image: url("images/logos/thought.png");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     width: 300px;
     height: 300px;
 
@@ -85,6 +94,43 @@ body {
     align-items: center;
     height: 100%;
     text-align: center;
-    padding-left: 15%;
+    padding-left: 20%;
     padding-right: 15%;
+}
+
+.img-text-wrapper .subtitle {
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
+    padding-top: 50%;
+
+}
+
+
+.img-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: lightseagreen;
+}
+
+.img-darken {
+    transition: 0.5s;
+    filter: brightness(10%);
+}
+
+/* About page */
+.two-column-wrapper {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+}
+
+.profile-image-wrapper img {
+    width: 100%;
+}
+
+.profile-content-wrapper {
+    padding: 30px;
+}
+
+.profile-content-wrapper h1 {
+    color: lightseagreen;
 }

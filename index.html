@@ -3,13 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <title>Page Titel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="nav-wrapper">
             <div class="left-side">
-                <div class="nav-link-wrapper">
+                <div class="nav-link-wrapper active-nav-link">
                     <a href="index.html">Home</a>
                 </div>
 
@@ -32,9 +33,6 @@
                     <div class="portfolio-img-background" style="background-image:url(images/portfolio1.jpg)"></div>
 
                     <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="images/logos/thought.png">
-                        </div>
 
                         <div class="subtitle">
                             Using a different approach than the NORM!
@@ -46,9 +44,6 @@
                     <div class="portfolio-img-background" style="background-image:url(images/portfolio2.jpg)"></div>
 
                     <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="images/logos/thought.png">
-                        </div>
                         
                         <div class="subtitle">
                             Everything starts with a THOUGHT!
@@ -60,9 +55,6 @@
                     <div class="portfolio-img-background" style="background-image:url(images/portfolio3.jpg)"></div>
 
                     <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="images/logos/thought.png">
-                        </div>
                         
                         <div class="subtitle">
                             Keep your environment simple and PRODUCTIVE!
@@ -74,9 +66,6 @@
                     <div class="portfolio-img-background" style="background-image:url(images/portfolio4.jpg)"></div>
 
                     <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="images/logos/thought.png">
-                        </div>
                         
                         <div class="subtitle">
                             Make it your WAY!
@@ -88,9 +77,6 @@
                     <div class="portfolio-img-background" style="background-image:url(images/portfolio5.jpg)"></div>
 
                     <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="images/logos/thought.png">
-                        </div>
                         
                         <div class="subtitle">
                             We are all ONE!
@@ -102,9 +88,6 @@
                     <div class="portfolio-img-background" style="background-image:url(images/portfolio6.jpg)"></div>
 
                     <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="images/logos/thought.png">
-                        </div>
                         
                         <div class="subtitle">
                             Keep your FOCUS!
@@ -116,9 +99,6 @@
                     <div class="portfolio-img-background" style="background-image:url(images/portfolio7.jpg)"></div>
 
                     <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="images/logos/thought.png">
-                        </div>
                         
                         <div class="subtitle">
                             Work effective yet CLEAN!
@@ -130,9 +110,6 @@
                     <div class="portfolio-img-background" style="background-image:url(images/portfolio8.jpg)"></div>
 
                     <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="images/logos/thought.png">
-                        </div>
                         
                         <div class="subtitle">
                             It does not matter WHO YOU ARE!
@@ -144,9 +121,6 @@
                     <div class="portfolio-img-background" style="background-image:url(images/portfolio9.jpg)"></div>
 
                     <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="images/logos/thought.png">
-                        </div>
                         
                         <div class="subtitle">
                             It can say a lot if it is PRECISE!
@@ -158,9 +132,6 @@
                     <div class="portfolio-img-background" style="background-image:url(images/portfolio10.jpg)"></div>
 
                     <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="images/logos/thought.png">
-                        </div>
                         
                         <div class="subtitle">
                             The euqipment differs yet stays the SAME!
@@ -172,9 +143,6 @@
                     <div class="portfolio-img-background" style="background-image:url(images/portfolio11.jpg)"></div>
 
                     <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="images/logos/thought.png">
-                        </div>
                         
                         <div class="subtitle">
                             Forever we are CONNECTED!
@@ -186,9 +154,6 @@
                     <div class="portfolio-img-background" style="background-image:url(images/portfolio12.jpg)"></div>
 
                     <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="images/logos/thought.png">
-                        </div>
                         
                         <div class="subtitle">
                             Don't cut corners when you THINK(PAD)!
@@ -201,4 +166,17 @@
 
     </div>
 </body>
+<script>
+    const porfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+    porfolioItems.forEach(porfolioItem => {
+        porfolioItem.addEventListener('mouseover', () => {
+            porfolioItem.childNodes[1].classList.add('img-darken');
+        })
+
+        porfolioItem.addEventListener('mouseout', () => {
+            porfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+</script>
 </html>
