@@ -21,21 +21,7 @@ public class JdbcEncryptionDao implements EncryptionDao {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 
 	private String encrypt(String yourPw, int randomShiftNum) {
