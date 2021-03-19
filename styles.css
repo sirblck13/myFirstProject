@@ -129,6 +129,7 @@ body {
 
 .profile-content-wrapper h1{
     padding-left: 10px;
+    margin-top: 0px;
 
 }
 
@@ -138,7 +139,12 @@ body {
 }
 
 .profile-content-wrapper :nth-child(4){
-    margin: 50px;
+    margin: 20px
+}
+
+.profile-content-wrapper :last-child{
+    color: rgb(112, 197, 193);
+    opacity: 0.5;
 }
 
 
