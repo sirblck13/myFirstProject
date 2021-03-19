@@ -127,9 +127,21 @@ body {
     width: 100%;
 }
 
-.profile-content-wrapper {
-    padding: 30px;
+.profile-content-wrapper h1{
+    padding-left: 10px;
+
 }
+
+.profile-content-wrapper p{
+    padding-left: 10px;
+    margin: 9px;
+}
+
+.profile-content-wrapper :nth-child(4){
+    margin: 50px;
+}
+
+
 
 .profile-content-wrapper h1 {
     color: lightseagreen;
