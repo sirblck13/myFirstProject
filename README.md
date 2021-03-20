@@ -1,2 +1,2 @@
 #First
-Thats my fist ever project. I'm selftaught so far and working alongside a tutorial.
+That's my first own project. 
