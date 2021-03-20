@@ -1,4 +1,4 @@
-/* Master styles*/
+/* MASTE STYLES */
 body {
     font-family: "Lato", sans-serif;
     margin: 0px;
@@ -9,11 +9,23 @@ body {
     grid-template-columns: 1fr;
 }
 
-/* Nav styles*/
+/* NAV STYLES */
 .nav-wrapper {
-    display: flex;
+    display: grid;
     justify-content: space-between;
     padding: 38px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "home name";
+}
+
+div.right-side {
+    grid-area: name;
+    text-align: right;
+}
+
+div.left-side {
+    grid-area: home;
 }
 
 .left-side {
@@ -54,11 +66,16 @@ body {
     color: black !important;
 }
 
-/* Portfolio styles*/
+/* PORTFOLIO STYLES */
 
 .portfolio-items-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "picture picture picture"
+        "picture picture picture"
+        "picture picture picture"
+        "picture picture picture";
 }
 
 .portfolio-item-wrapper {
@@ -117,14 +134,22 @@ body {
     filter: brightness(10%);
 }
 
-/* About page */
+/* ABOUT PAGE */
 .two-column-wrapper {
     display: grid;
     grid-template-columns: 0.2fr 1fr;
+    grid-template-areas: 
+        "picture text";
 }
 
-.profile-image-wrapper img {
+
+.profile-image-wrapper {
     width: 100%;
+    grid-area: picture;
+}
+
+.profile-content-wrapper {
+    grid-area: text;
 }
 
 .profile-content-wrapper h1{
@@ -151,4 +176,42 @@ body {
 
 .profile-content-wrapper h1 {
     color: lightseagreen;
+}
+
+/* MEDIA SCALING */
+
+@media (max-width: 1024px) {
+
+    /* INDEX PAGE */
+    .nav-wrapper{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "home name";
+    }
+
+    .portfolio-items-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "picture"
+            "picture"
+            "picture"
+            "picture"
+            "picture"
+            "picture"
+            "picture"
+            "picture"
+            "picture"
+            "picture"
+            "picture"
+            "picture";
+    }
+
+    /* ABOUT PAGE */
+    .two-column-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "picture"
+            "text";
+    }
+
+
 }
